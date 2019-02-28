@@ -9,10 +9,10 @@ Prevent your Synology router from using 2.4GHz channels above channel 11.
 
 **Solution**:
 ```
+scp channel_fix.sh root@192.168.1.1:/root/
 ssh root@192.168.1.1
-
+chmod +x channel_fix.sh
 echo "*       *       *       *       *       root    /bin/ash /root/channel_fix.sh" >> /etc/crontab
-
 /usr/syno/sbin/synoservicectl --reload crond
 ```
 
