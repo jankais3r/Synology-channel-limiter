@@ -10,5 +10,5 @@ if [ "$current_channel" -gt 11 ]; then
 	iwconfig wlan0 channel $rand_channel
 	ifconfig wlan0 up
 else
-	#echo "Channel $current_channel is within the allowed range."
+	echo "Channel $current_channel is within the allowed range."
 fi
